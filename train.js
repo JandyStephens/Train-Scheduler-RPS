@@ -78,10 +78,11 @@ trainData.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
   //Taking user time entered on page, splitting at : to hours and minutes, and storing as variable timeArr.
   var timeArr = tFirstTrain.split(":");
-  //
+  //setting the hour and minutes from the split time
   var trainTime = moment()
     .hours(timeArr[0])
     .minutes(timeArr[1]);
+  //?????
   var maxMoment = moment.max(moment(), trainTime);
   var tMinutes;
   var tArrival;
